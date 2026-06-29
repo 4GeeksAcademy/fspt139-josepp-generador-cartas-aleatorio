@@ -1,5 +1,80 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+* {
+	/*border: 1px dashed red;
+	min-height: 10px;*/
+}
+
+body{    
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.tapete {
+  background-color: #2b7a4b;   
+  background-image:    
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 3px),
+    radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 2px),
+    radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 2px);  
+  background-size: 4px 4px, 4px 4px, 12px 12px, 12px 12px;
+  background-position: 0 0, 0 0, 0 0, 6px 6px;
+}
+
+.carta{
+    background-color: #FFF;    
+    height: 400px;
+    width: 260px;
+    margin:auto;
+    padding: 0 15px;
+    border-radius: 20px;   
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    
+
+}
+
+
+
+
+
+.carta_numero{
+    color:black;
+    font-size: 8em;
+}
+.carta_icono{
+    padding: 0;
+    margin: 0;    
+    font-size: 5.5em;
+    line-height: 1em;
+}
+.carta.spade .carta_icono, 
+.carta.club .carta_icono{color:black}
+
+.carta.heart .carta_icono, 
+.carta.diamond .carta_icono{ color:red;}
+
+.icono_superior{
+    text-align: left;
+}
+.icono_inferior{
+    text-align: left;
+    rotate: calc(180deg);
+}
+
+
+
+/* Animación del Flip */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg); /* Empieza de lado, invisible */
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg); /* Termina de frente */
+  }
 }
